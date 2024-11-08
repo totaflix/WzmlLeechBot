@@ -79,7 +79,7 @@ if len(BOT_TOKEN) == 0:
     log_error("BOT_TOKEN variable is missing! Exiting now")
     exit(1)
 
-bot_id = BOT_TOKEN.split(':', 1)[0]
+bot_id = BOT_TOKEN.split('7577941907:AAGQ2cjhNFnXphqPu4yncX4bCtS-pJMGgk8', 1)[0]
 
 DATABASE_URL = environ.get('DATABASE_URL', 'mongodb+srv://suproboiragi2:t4GwmmrWCkUcX3Ui@cluster0.nn4hh.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0')
 if len(DATABASE_URL) == 0:
