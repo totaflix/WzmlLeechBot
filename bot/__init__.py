@@ -200,16 +200,16 @@ if len(EXTENSION_FILTER) > 0:
         x = x.lstrip('.')
         GLOBAL_EXTENSION_FILTER.append(x.strip().lower())
 
-LINKS_LOG_ID = environ.get('LINKS_LOG_ID', '-1002494826554')
+LINKS_LOG_ID = environ.get('LINKS_LOG_ID', '')
 LINKS_LOG_ID = '' if len(LINKS_LOG_ID) == 0 else int(LINKS_LOG_ID)
 
-MIRROR_LOG_ID = environ.get('MIRROR_LOG_ID', '-1002327511809')
+MIRROR_LOG_ID = environ.get('MIRROR_LOG_ID', '')
 if len(MIRROR_LOG_ID) == 0:
     MIRROR_LOG_ID = '-1002327511809'
     
-LEECH_LOG_ID = environ.get('LEECH_LOG_ID', '-1002494826554')
+LEECH_LOG_ID = environ.get('LEECH_LOG_ID', '')
 if len(LEECH_LOG_ID) == 0:
-    LEECH_LOG_ID = '-1002494826554'
+    LEECH_LOG_ID = ''
     
 EXCEP_CHATS = environ.get('EXCEP_CHATS', '')
 if len(EXCEP_CHATS) == 0:
