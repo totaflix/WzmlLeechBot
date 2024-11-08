@@ -74,16 +74,16 @@ status_reply_dict = {}
 download_dict = {}
 rss_dict = {}
 
-BOT_TOKEN = environ.get('BOT_TOKEN', '')
+BOT_TOKEN = environ.get('BOT_TOKEN', '7577941907:AAGQ2cjhNFnXphqPu4yncX4bCtS-pJMGgk8')
 if len(BOT_TOKEN) == 0:
     log_error("BOT_TOKEN variable is missing! Exiting now")
     exit(1)
 
 bot_id = BOT_TOKEN.split(':', 1)[0]
 
-DATABASE_URL = environ.get('DATABASE_URL', '')
+DATABASE_URL = environ.get('DATABASE_URL', 'mongodb+srv://suproboiragi2:t4GwmmrWCkUcX3Ui@cluster0.nn4hh.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0')
 if len(DATABASE_URL) == 0:
-    DATABASE_URL = ''
+    DATABASE_URL = 'mongodb+srv://suproboiragi2:t4GwmmrWCkUcX3Ui@cluster0.nn4hh.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0'
 
 if DATABASE_URL:
     conn = MongoClient(DATABASE_URL)
@@ -122,21 +122,21 @@ if DATABASE_URL:
 else:
     config_dict = {}
 
-OWNER_ID = environ.get('OWNER_ID', '')
+OWNER_ID = environ.get('OWNER_ID', '5659668981')
 if len(OWNER_ID) == 0:
     log_error("OWNER_ID variable is missing! Exiting now")
     exit(1)
 else:
     OWNER_ID = int(OWNER_ID)
 
-TELEGRAM_API = environ.get('TELEGRAM_API', '')
+TELEGRAM_API = environ.get('TELEGRAM_API', '24172301')
 if len(TELEGRAM_API) == 0:
     log_error("TELEGRAM_API variable is missing! Exiting now")
     exit(1)
 else:
     TELEGRAM_API = int(TELEGRAM_API)
 
-TELEGRAM_HASH = environ.get('TELEGRAM_HASH', '')
+TELEGRAM_HASH = environ.get('TELEGRAM_HASH', 'ca79a5425fa6dbe58853ab66cc7bb168')
 if len(TELEGRAM_HASH) == 0:
     log_error("TELEGRAM_HASH variable is missing! Exiting now")
     exit(1)
@@ -182,7 +182,7 @@ if AUTHORIZED_CHATS:
         if topic_ids:
             user_data[chat_id].setdefault('topic_ids', []).extend(map(int, topic_ids))
 
-SUDO_USERS = environ.get('SUDO_USERS', '')
+SUDO_USERS = environ.get('SUDO_USERS', '7381899471')
 if len(SUDO_USERS) != 0:
     aid = SUDO_USERS.split()
     for id_ in aid:
@@ -200,16 +200,16 @@ if len(EXTENSION_FILTER) > 0:
         x = x.lstrip('.')
         GLOBAL_EXTENSION_FILTER.append(x.strip().lower())
 
-LINKS_LOG_ID = environ.get('LINKS_LOG_ID', '')
+LINKS_LOG_ID = environ.get('LINKS_LOG_ID', '-1002494826554')
 LINKS_LOG_ID = '' if len(LINKS_LOG_ID) == 0 else int(LINKS_LOG_ID)
 
-MIRROR_LOG_ID = environ.get('MIRROR_LOG_ID', '')
+MIRROR_LOG_ID = environ.get('MIRROR_LOG_ID', '-1002327511809')
 if len(MIRROR_LOG_ID) == 0:
-    MIRROR_LOG_ID = ''
+    MIRROR_LOG_ID = '-1002327511809'
     
-LEECH_LOG_ID = environ.get('LEECH_LOG_ID', '')
+LEECH_LOG_ID = environ.get('LEECH_LOG_ID', '-1002494826554')
 if len(LEECH_LOG_ID) == 0:
-    LEECH_LOG_ID = ''
+    LEECH_LOG_ID = '-1002494826554'
     
 EXCEP_CHATS = environ.get('EXCEP_CHATS', '')
 if len(EXCEP_CHATS) == 0:
@@ -221,7 +221,7 @@ def wztgClient(*args, **kwargs):
     return tgClient(*args, **kwargs)
 
 IS_PREMIUM_USER = False
-user = ''
+user = '5659668981'
 USER_SESSION_STRING = environ.get('USER_SESSION_STRING', '')
 if len(USER_SESSION_STRING) != 0:
     log_info("Creating client from USER_SESSION_STRING")
@@ -233,12 +233,12 @@ if len(USER_SESSION_STRING) != 0:
         log_error(f"Failed making client from USER_SESSION_STRING : {e}")
         user = ''
 
-MEGA_EMAIL = environ.get('MEGA_EMAIL', '')
-MEGA_PASSWORD = environ.get('MEGA_PASSWORD', '')
+MEGA_EMAIL = environ.get('MEGA_EMAIL', 'starastar230@gmail.com')
+MEGA_PASSWORD = environ.get('MEGA_PASSWORD', 'Starstar1@')
 if len(MEGA_EMAIL) == 0 or len(MEGA_PASSWORD) == 0:
     log_warning('MEGA Credentials not provided!')
-    MEGA_EMAIL = ''
-    MEGA_PASSWORD = ''
+    MEGA_EMAIL = 'starastar230@gmail.com'
+    MEGA_PASSWORD = 'Starstar1@'
     
 GDTOT_CRYPT = environ.get('GDTOT_CRYPT', '')
 if len(GDTOT_CRYPT) == 0:
@@ -388,7 +388,7 @@ SCREENSHOTS_MODE = SCREENSHOTS_MODE.lower() == 'true'
 SOURCE_LINK = environ.get('SOURCE_LINK', '')
 SOURCE_LINK = SOURCE_LINK.lower() == 'true'
 
-DELETE_LINKS = environ.get('DELETE_LINKS', '')
+DELETE_LINKS = environ.get('DELETE_LINKS', '5')
 DELETE_LINKS = DELETE_LINKS.lower() == 'true'
 
 EQUAL_SPLITS = environ.get('EQUAL_SPLITS', '')
@@ -465,11 +465,11 @@ USER_TIME_INTERVAL = int(USER_TIME_INTERVAL) if USER_TIME_INTERVAL.isdigit() els
 PLAYLIST_LIMIT = environ.get('PLAYLIST_LIMIT', '')
 PLAYLIST_LIMIT = '' if len(PLAYLIST_LIMIT) == 0 else int(PLAYLIST_LIMIT)
 
-FSUB_IDS = environ.get('FSUB_IDS', '')
+FSUB_IDS = environ.get('FSUB_IDS', '-1002161968943')
 if len(FSUB_IDS) == 0:
-    FSUB_IDS = ''
+    FSUB_IDS = '-1002161968943'
 
-BOT_PM = environ.get('BOT_PM', '')
+BOT_PM = environ.get('BOT_PM', 'True')
 BOT_PM = BOT_PM.lower() == 'true'
 
 DAILY_TASK_LIMIT = environ.get('DAILY_TASK_LIMIT', '')
@@ -505,15 +505,15 @@ IMG_PAGE = int(IMG_PAGE) if IMG_PAGE.isdigit() else ''
 
 AUTHOR_NAME = environ.get('AUTHOR_NAME', '')
 if len(AUTHOR_NAME) == 0:
-    AUTHOR_NAME = 'WZML-X'
+    AUTHOR_NAME = 'Akash-Roy'
 
 AUTHOR_URL = environ.get('AUTHOR_URL', '')
 if len(AUTHOR_URL) == 0:
-    AUTHOR_URL = 'https://t.me/WZML_X'
+    AUTHOR_URL = 'https://t.me/akash_roy_official'
 
 TITLE_NAME = environ.get('TITLE_NAME', '')
 if len(TITLE_NAME) == 0:
-    TITLE_NAME = 'WZ-M/L-X'
+    TITLE_NAME = 'UL'
     
 COVER_IMAGE = environ.get('COVER_IMAGE', '')
 if len(COVER_IMAGE) == 0:
